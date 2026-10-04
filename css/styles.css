@@ -1,0 +1,322 @@
+/* 基础样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 导航栏样式 */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;  /* 固定导航栏高度 */
+    background-color: #90c990;
+    z-index: 1000;
+    display: flex;  /* 使用flex布局 */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+}
+
+.nav-logo {
+    height: 50px;  /* 设置logo容器高度 */
+    width: 50px;   /* 设置logo容器宽度 */
+    margin-right: 20px;  /* 与导航项目保持间距 */
+    display: flex;
+    align-items: center;
+}
+
+/* logo图片样式 */
+.logo-img {
+    height: 100%;  /* 填充容器高度 */
+    width: 100%;   /* 填充容器宽度 */
+    object-fit: contain;  /* 保持图片比例 */
+}
+
+/* 导航项目容器 */
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 1200px;  /* 限制最大宽度 */
+    width: 100%;
+}
+/* 导航项目样式 */
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.special-btn {
+    padding: 8px 15px;
+    background-color: white;
+    color: #90c990;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.special-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* 为了防止内容被固定导航栏遮挡，给主内容区域添加上边距 */
+.main-content {
+    margin-top: 60px;  /* 根据导航栏高度调整，可能需要调整具体数值 */
+    padding-top: 20px;
+}
+
+/* 轮播图样式 */
+.slider-container {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 轮播图控制按钮 */
+.slider-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.slider-dot.active {
+    background: #fff;
+}
+/* 箭头按钮样式 */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.slider-arrow.prev {
+    left: 20px;
+}
+
+.slider-arrow.next {
+    right: 20px;
+}
+
+/* 在小屏幕上隐藏箭头 */
+@media (max-width: 768px) {
+    .slider-arrow {
+        display: none;
+    }
+}
+
+/* 内容区域样式 */
+.content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* 标题样式 */
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    border-bottom: 2px solid #90c990;
+    padding: 10px 0;
+    margin: 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hint-text {
+    font-size: 10px;
+    color: #666;
+    margin-left: 0px;
+    font-weight: normal;
+}
+
+/* 关于作品区域 */
+.about {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.poster {
+    float: left;
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+/* 图片网格样式 */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+.grid-image {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.grid-image:hover {
+    transform: scale(1.05);
+}
+
+.image-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    text-align: center;
+}
+
+.image-viewer img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 添加导航按钮样式 */
+.nav-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 30px;
+}
+
+.next {
+    right: 30px;
+}
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #90c990;
+    color: white;
+    margin-top: 30px;
+}

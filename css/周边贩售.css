@@ -1,0 +1,394 @@
+/* 基础样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 导航栏样式 */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;  /* 固定导航栏高度 */
+    background-color: #90c990;
+    z-index: 1000;
+    display: flex;  /* 使用flex布局 */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+}
+
+.nav-logo {
+    height: 50px;  /* 设置logo容器高度 */
+    width: 50px;   /* 设置logo容器宽度 */
+    margin-right: 20px;  /* 与导航项目保持间距 */
+    display: flex;
+    align-items: center;
+}
+
+/* logo图片样式 */
+.logo-img {
+    height: 100%;  /* 填充容器高度 */
+    width: 100%;   /* 填充容器宽度 */
+    object-fit: contain;  /* 保持图片比例 */
+}
+
+/* 导航项目容器 */
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 1200px;  /* 限制最大宽度 */
+    width: 100%;
+}
+/* 导航项目样式 */
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.special-btn {
+    padding: 8px 15px;
+    background-color: white;
+    color: #90c990;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.special-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* 为了防止内容被固定导航栏遮挡，给主内容区域添加上边距 */
+.main-content {
+    margin-top: 60px;  /* 根据导航栏高度调整，可能需要调整具体数值 */
+    padding-top: 20px;
+}
+
+/* 轮播图样式 */
+.slider-container {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+	margin-top: 50px;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 轮播图控制按钮 */
+.slider-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.slider-dot.active {
+    background: #fff;
+}
+
+/* 箭头按钮样式 */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.slider-arrow.prev {
+    left: 20px;
+}
+
+.slider-arrow.next {
+    right: 20px;
+}
+
+/* 在小屏幕上隐藏箭头 */
+@media (max-width: 768px) {
+    .slider-arrow {
+        display: none;
+    }
+}
+
+/* 内容区域样式 */
+.content {
+    width: 80%;
+    padding: 20px 0;
+}
+.recommended {
+	max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #90c990;
+    padding: 10px 0;
+    margin: 0px 0;
+}
+
+.en-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* 修改商品卡片的样式 */
+.item-card {
+    border: 1px solid #d0d0d0;  /* 添加黑色细边框 */
+    border-radius: 8px;      /* 保持圆角 */
+    padding: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #fff;  /* 确保背景为白色 */
+    margin-bottom: 15px;     /* 添加底部间距 */
+}
+
+/* 悬停效果 */
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);  /* 增加阴影效果 */
+}
+
+/* 确保图片不会超出卡片边框 */
+.item-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;  /* 消除图片底部可能的空隙 */
+}
+
+.item-image {
+    width: 100%;
+    height: 250px;  /* 设置固定高度 */
+    margin-bottom: 10px;
+    overflow: hidden;  /* 防止图片溢出 */
+}
+
+.item-info {
+    padding: 10px;
+}
+
+.item-name {
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 分类选项卡样式 */
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.tab-button {
+    padding: 10px 25px;
+    border: 1px solid #95c095;
+    background: white;
+    color: #95c095;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.tab-button:hover {
+    background: #e8f3e8;
+}
+
+.tab-button.active {
+    background: #95c095;
+    color: white;
+}
+
+/* 商品卡片过渡动画 */
+.item-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.item-card.hidden {
+    display: none;
+}
+
+.item-card.fade {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* 替换原来的 more-button 相关样式 */
+.button-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.action-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.action-button:hover {
+    background-color: #2980b9;
+}
+
+.action-button .icon {
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.button-text {
+    margin-right: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 收起动画 */
+.fade-out {
+    animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* 展开动画 */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 在现有的CSS中添加以下样式 */
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 当没有更多商品时，隐藏按钮 */
+.more-button.hidden {
+    display: none;
+}
