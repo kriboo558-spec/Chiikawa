@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吉伊卡哇</title>
+    <link rel="stylesheet" href="css/留言板.css">
+    <script src="js/留言板.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 导航栏 -->
+<nav class="nav-bar">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+        </a>
+    </div>
+    <div class="nav-items">
+        <a href="index.html" class="nav-item">首页</a>
+        <a href="剧情简介.html" class="nav-item">剧情简介</a>
+        <a href="角色介绍.html" class="nav-item">角色介绍</a>
+        <a href="精彩片段.html" class="nav-item">精彩片段</a>
+        <a href="关于作者.html" class="nav-item">关于作者</a>
+        <a href="周边贩售.html" class="nav-item">周边贩售</a>
+        <a href="注册登录.html" class="nav-item">注册登录</a>
+        <a href="留言板.html" class="nav-item">留言板</a>
+    </div>
+    <div class="nav-button">
+        <a href="特效.html" class="special-btn">点我</a>
+    </div>
+</nav>
+
+<div style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;">
+</div>
+
+<div class="page-container">
+    <!-- 左侧海报部分 -->
+    <div class="poster-section">
+        <img src="images/海报.jpg" alt="温馨海报" class="poster-image">
+    </div>
+
+    <!-- 右侧留言板部分 -->
+    <div class="container">
+        <h1 class="title">在线留言</h1>
+        
+        <div class="message-board">
+            <!-- 留言列表 -->
+            <div id="messageList" class="messages">
+                <!-- 留言将通过 JavaScript 动态添加 -->
+            </div>
+
+            <!-- 留言表单 -->
+            <form class="message-form" id="messageForm" onsubmit="submitMessage(event)">
+                <div class="form-group">
+                    <label for="name">姓　名:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">留言内容:</label>
+                    <textarea id="content" name="content" rows="4" required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="submit-btn">提 交</button>
+                    <button type="reset" class="reset-btn">重 置</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<div class="section-title">涂鸦板</div>
+<div class="drawing-board-container">
+    <canvas id="drawingBoard"></canvas>
+    <div class="drawing-tools">
+        <input type="color" id="colorPicker" value="#000000">
+        <input type="range" id="brushSize" min="1" max="20" value="5">
+        <button id="clearCanvas" class="tool-btn">清空画板</button>
+        <button id="saveCanvas" class="tool-btn">保存涂鸦</button>
+    </div>
+</div>
+</body>
+</html>

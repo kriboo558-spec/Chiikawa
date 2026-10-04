@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>吉伊卡哇</title>
+    <link rel="stylesheet" href="css/注册登录.css">
+    <script src="js/注册登录.js"></script>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+<nav class="nav-bar">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+        </a>
+    </div>
+    <div class="nav-items">
+        <a href="index.html" class="nav-item">首页</a>
+        <a href="剧情简介.html" class="nav-item">剧情简介</a>
+        <a href="角色介绍.html" class="nav-item">角色介绍</a>
+        <a href="精彩片段.html" class="nav-item">精彩片段</a>
+        <a href="关于作者.html" class="nav-item">关于作者</a>
+        <a href="周边贩售.html" class="nav-item">周边贩售</a>
+        <a href="注册登录.html" class="nav-item">注册登录</a>
+        <a href="留言板.html" class="nav-item">留言板</a>
+    </div>
+    <div class="nav-button">
+        <a href="特效.html" class="special-btn">点我</a>
+    </div>
+</nav>
+
+<div style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;">
+</div>
+
+<div class="login-container">
+    <div class="background-selector">
+        <div class="bg-option active" data-bg="images/background.jpg"></div>
+    </div>
+
+    <div class="tab-container">
+        <div class="tab" id="loginTab">登录</div>
+        <div class="tab" id="registerTab">注册</div>
+    </div>
+
+    <form id="loginForm">
+        <div class="form-group">
+            <input type="text" placeholder="请输入手机号">
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="请输入密码">
+        </div>
+        <button type="submit" class="submit-btn">立即登录</button>
+    </form>
+
+    <form id="registerForm" style="display: none;">
+        <div class="form-group">
+            <input type="text" placeholder="请输入手机号">
+            <button type="button" class="verify-btn" id="verifyBtn">
+			    <span class="btn-text">获取验证码</span>
+                <span class="countdown" style="display: none;"></span>
+            </button>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="请输入验证码">
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="请输入密码">
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="请确认密码">
+        </div>
+        <button type="submit" class="submit-btn">立即注册</button>
+    </form>
+    </div>
+</div>
+</body>
+</html>

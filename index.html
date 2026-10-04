@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>吉伊卡哇</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- 轮播图 -->
+    <div class="slider-container">
+        <div class="slider-arrow prev">❮</div>
+        <div class="slider-arrow next">❯</div>
+        <div class="slider">
+            <div class="slide active">
+                <img src="images/banner1.jpg" alt="轮播图1">
+            </div>
+            <div class="slide">
+                <img src="images/banner2.jpg" alt="轮播图2">
+            </div>
+            <div class="slide">
+                <img src="images/banner3.jpg" alt="轮播图3">
+            </div>
+            <div class="slide">
+                <img src="images/banner4.jpg" alt="轮播图4">
+            </div>
+            <div class="slide">
+                <img src="images/banner5.jpg" alt="轮播图5">
+            </div>
+        </div>
+        <div class="slider-buttons">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+<nav class="nav-bar">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+        </a>
+    </div>
+    <div class="nav-items">
+        <a href="index.html" class="nav-item">首页</a>
+        <a href="剧情简介.html" class="nav-item">剧情简介</a>
+        <a href="角色介绍.html" class="nav-item">角色介绍</a>
+        <a href="精彩片段.html" class="nav-item">精彩片段</a>
+        <a href="关于作者.html" class="nav-item">关于作者</a>
+        <a href="周边贩售.html" class="nav-item">周边贩售</a>
+        <a href="注册登录.html" class="nav-item">注册登录</a>
+        <a href="留言板.html" class="nav-item">留言板</a>
+    </div>
+    <div class="nav-button">
+        <a href="特效.html" class="special-btn">点我</a>
+    </div>
+</nav>
+    
+	<div class="content">
+        <!-- 关于作品 -->
+        <div class="section-title">关于作品</div>
+        <div class="about">
+            <img src="images/poster.jpg" class="poster">
+            <p>电视动画《吉伊卡哇》（英文名：Chiikawa）改编自ナガノ的同名漫画，于2022年4月4日起每周五6点40分在富士电视台播出。2023年由杰外动漫引进中国。2024年1月1日起，《吉伊卡哇》中译版动画在哔哩哔哩和抖音平台上的官方账号持续更新。</p>
+            <p>《吉伊卡哇/小可爱/ちいかわ》其实是『なんか小さくてかわいいやつ』简写，意为感觉又小又可爱的东西。</p>
+            <p>《吉伊卡哇》（ちいかわ）是日本的漫画家ナガノ创作出來的漫画角色，漫画自2020年开始在网路上连载，并在2022年制作成电视动画在日本首播。因呆萌可爱的外型，加上他角色外表截然不同的奇特世界从而引发热烈讨论。</p>
+        </div>
+        <!-- 精彩照片 -->
+        <div class="section-title">
+		    精美壁纸
+            <span class="hint-text">点击查看大图</span>
+        </div>
+        <div class="image-grid">
+            <img src="images/image1.jpg" onclick="showImage(this.src)" class="grid-image">
+            <img src="images/image2.jpg" onclick="showImage(this.src)" class="grid-image">
+            <img src="images/image3.jpg" onclick="showImage(this.src)" class="grid-image">
+            <img src="images/image4.jpg" onclick="showImage(this.src)" class="grid-image">
+            <img src="images/image5.jpg" onclick="showImage(this.src)" class="grid-image">
+            <img src="images/image6.jpg" onclick="showImage(this.src)" class="grid-image">
+            <img src="images/image7.jpg" onclick="showImage(this.src)" class="grid-image">
+            <img src="images/image8.jpg" onclick="showImage(this.src)" class="grid-image">
+        </div>
+    </div>
+        <!-- 添加图片查看器 -->
+        <div id="imageViewer" class="image-viewer">
+            <span class="close-btn" onclick="closeImage()">&times;</span>
+            <div class="nav-btn prev" onclick="changeImage(-1)">&#10094;</div>
+            <div class="nav-btn next" onclick="changeImage(1)">&#10095;</div>
+            <img id="fullImage" src="" alt="大图">
+       </div>
+</html>

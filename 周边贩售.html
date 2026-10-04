@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>吉伊卡哇</title>
+    <link rel="stylesheet" href="css/周边贩售.css">
+    <script src="js/周边贩售.js"></script>
+</head>
+<body>
+    <!-- 轮播图 -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active">
+                <img src="images/shopping.jpg" alt="轮播图1">
+            </div>
+            <div class="slide">
+            </div>
+            <div class="slide">
+            </div>
+        </div>
+            <span class="slider-dot"></span>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+<nav class="nav-bar">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+        </a>
+    </div>
+    <div class="nav-items">
+        <a href="index.html" class="nav-item">首页</a>
+        <a href="剧情简介.html" class="nav-item">剧情简介</a>
+        <a href="角色介绍.html" class="nav-item">角色介绍</a>
+        <a href="精彩片段.html" class="nav-item">精彩片段</a>
+        <a href="关于作者.html" class="nav-item">关于作者</a>
+        <a href="周边贩售.html" class="nav-item">周边贩售</a>
+        <a href="注册登录.html" class="nav-item">注册登录</a>
+        <a href="留言板.html" class="nav-item">留言板</a>
+    </div>
+    <div class="nav-button">
+        <a href="特效.html" class="special-btn">点我</a>
+    </div>
+</nav>
+    
+<div class="recommended">
+    <h2 class="title">
+        <div class="en-text">周边贩售</div>
+    </h2>
+    
+    <div class="category-tabs">
+        <button class="tab-button active" data-category="all">全部商品</button>
+        <button class="tab-button" data-category="charm">挂件</button>
+        <button class="tab-button" data-category="plush">玩偶</button>
+        <button class="tab-button" data-category="daily">日用品</button>
+    </div>
+
+   <div class="items-grid" id="itemsGrid">
+        <!-- 第一行商品 -->
+        <div class="item-card" data-category="charm">
+            <div class="item-image">
+                <img src="images/plush-1.jpg" alt="吉伊黑装玩偶">
+            </div>
+            <div class="item-info">
+                <div class="item-name">黑色魔法师系列挂件（小八）</div>
+                <div class="item-price">¥80</div>
+            </div>
+        </div>
+
+        <div class="item-card" data-category="charm">
+            <div class="item-image">
+                <img src="images/plush-2.jpg" alt="吉伊红装玩偶">
+            </div>
+            <div class="item-info">
+                <div class="item-name">黑色魔法师系列挂件（吉伊）</div>
+                <div class="item-price">¥80</div>
+            </div>
+        </div>
+
+        <div class="item-card" data-category="charm">
+            <div class="item-image">
+                <img src="images/plush-3.jpg" alt="小八黑装玩偶">
+            </div>
+            <div class="item-info">
+                <div class="item-name">黑色魔法师系列挂件（乌萨奇）</div>
+                <div class="item-price">¥80</div>
+            </div>
+        </div>
+
+        <div class="item-card" data-category="charm">
+            <div class="item-image">
+                <img src="images/plush-4.jpg" alt="吉伊黑装玩偶">
+            </div>
+            <div class="item-info">
+                <div class="item-name">黑色魔法师系列挂件（飞鼠）</div>
+                <div class="item-price">¥80</div>
+            </div>
+        </div>
+
+        <!-- 第二行商品 -->
+        <div class="item-card" data-category="charm">
+            <div class="item-image">
+                <img src="images/plush-5.jpg" alt="吉伊寿司玩偶">
+            </div>
+            <div class="item-info">
+                <div class="item-name">餐厅系列挂件（小八）</div>
+                <div class="item-price">¥80</div>
+            </div>
+        </div>
+
+        <div class="item-card" data-category="charm">
+            <div class="item-image">
+                <img src="images/plush-6.jpg" alt="吉伊迷你玩偶">
+            </div>
+            <div class="item-info">
+                <div class="item-name">餐厅系列挂件（吉伊）</div>
+                <div class="item-price">¥80</div>
+            </div>
+        </div>
+
+        <div class="item-card" data-category="charm">
+            <div class="item-image">
+                <img src="images/plush-7.jpg" alt="小八玩偶">
+            </div>
+            <div class="item-info">
+                <div class="item-name">餐厅系列挂件（乌萨奇）</div>
+                <div class="item-price">¥80</div>
+            </div>
+        </div>
+
+        <div class="item-card" data-category="charm">
+            <div class="item-image">
+                <img src="images/plush-8.jpg" alt="吉伊舞蹈玩偶">
+            </div>
+            <div class="item-info">
+                <div class="item-name">餐厅系列挂件（飞鼠）</div>
+                <div class="item-price">¥80</div>
+            </div>
+        </div>
+
+ <!-- 额外的商品卡片 (默认隐藏) -->
+        <div class="item-card hidden" data-category="plush">
+            <div class="item-image">
+                <img src="images/plush-9.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">坐姿玩偶（小八）</div>
+                <div class="item-price">¥150</div>
+            </div>
+        </div>
+        
+        <div class="item-card hidden" data-category="plush">
+            <div class="item-image">
+                <img src="images/plush-10.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">坐姿玩偶（吉伊）</div>
+                <div class="item-price">¥150</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="plush">
+            <div class="item-image">
+                <img src="images/plush-11.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">坐姿玩偶（乌萨奇）</div>
+                <div class="item-price">¥150</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="plush">
+            <div class="item-image">
+                <img src="images/plush-12.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">坐姿玩偶（飞鼠）</div>
+                <div class="item-price">¥150</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="plush">
+            <div class="item-image">
+                <img src="images/plush-13.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">站姿玩偶（水獭）</div>
+                <div class="item-price">¥150</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="plush">
+            <div class="item-image">
+                <img src="images/plush-14.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">圣诞坐姿玩偶（小八）</div>
+                <div class="item-price">¥200</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="plush">
+            <div class="item-image">
+                <img src="images/plush-15.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">圣诞坐姿玩偶（吉伊）</div>
+                <div class="item-price">¥200</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="plush">
+            <div class="item-image">
+                <img src="images/plush-16.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">圣诞坐姿玩偶（乌萨奇）</div>
+                <div class="item-price">¥200</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="daily">
+            <div class="item-image">
+                <img src="images/plush-17.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">木夹</div>
+                <div class="item-price">¥20</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="daily">
+            <div class="item-image">
+                <img src="images/plush-18.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">饭盒</div>
+                <div class="item-price">¥40</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="daily">
+            <div class="item-image">
+                <img src="images/plush-19.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">钥匙扣</div>
+                <div class="item-price">¥30</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="daily">
+            <div class="item-image">
+                <img src="images/plush-20.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">贴纸</div>
+                <div class="item-price">¥10</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="daily">
+            <div class="item-image">
+                <img src="images/plush-21.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">便签本</div>
+                <div class="item-price">¥20</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="daily">
+            <div class="item-image">
+                <img src="images/plush-22.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">餐具</div>
+                <div class="item-price">¥30</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="daily">
+            <div class="item-image">
+                <img src="images/plush-23.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">杯垫</div>
+                <div class="item-price">¥10</div>
+            </div>
+        </div>
+
+        <div class="item-card hidden" data-category="daily">
+            <div class="item-image">
+                <img src="images/plush-24.jpg" alt="新商品1">
+            </div>
+            <div class="item-info">
+                <div class="item-name">UNO联名卡牌</div>
+                <div class="item-price">¥50</div>
+            </div>
+        </div>
+        <!-- 可以继续添加更多隐藏的商品卡片 -->
+    </div>
+
+<!-- 修改按钮部分 -->
+<div class="button-container">
+    <button id="loadMoreBtn" class="action-button" onclick="loadMore()">
+        <span class="button-text">查看更多</span>
+        <span class="icon">↓</span>
+    </button>
+    <button id="collapseBtn" class="action-button hidden" onclick="collapseItems()">
+        <span class="button-text">收起</span>
+        <span class="icon">↑</span>
+    </button>
+</div>
+</body>
+</html>
